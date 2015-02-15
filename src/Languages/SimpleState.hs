@@ -7,8 +7,9 @@ module Languages.SimpleState where
 
 import Control.Applicative (Applicative(..), (<$>))
 import Control.Monad.State (StateT(runStateT), get, lift, modify)
-import Modular.Evaluator
 import qualified Data.Map as Map
+import Modular.Base
+import Modular.Evaluator
 import Prelude hiding (lookup)
 import qualified Prelude
 
