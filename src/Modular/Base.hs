@@ -1,6 +1,7 @@
 {-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE OverlappingInstances #-}
 
 module Modular.Base where
 
@@ -36,11 +37,11 @@ class (Functor f, Functor g) => f :<: g where
 instance Functor f => f :<: f where
   inj = id
 
-instance (Functor f, Functor g) => f :<: (f :+: g) where
-  inj = inl
+instance (Functor f, Functor g, Functor h, f :<: g) => f :<: (g :+: h) where
+  inj = inl . inj
 
-instance (Functor f, Functor g, Functor h, f :<: h) => f :<: (g :+: h) where
-  inj = inr . inj
+instance (Functor f, Functor g) => f :<: (g :+: f) where
+  inj = inr
 
 inject :: (g :<: f) => g (Fix f) -> Fix f
 inject = In . inj
