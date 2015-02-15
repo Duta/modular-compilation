@@ -1,9 +1,9 @@
-{-# LANGUAGE TypeOperators #-}
+{-# LANGUAGE FlexibleContexts      #-}
+{-# LANGUAGE FlexibleInstances     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FlexibleContexts #-}
-{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE TypeOperators         #-}
 
-module Languages.SimpleState.Evaluator where
+module Languages.SimpleState.Compiler where
 
 import Languages.SimpleState.Base
 import Modular.Base
