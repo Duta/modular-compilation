@@ -49,7 +49,7 @@ inject = In . inj
 -- Fixed-points
 newtype Fix f = In { out :: f (Fix f) }
 
-cata :: Functor f => (f a -> a) -> Fix f -> a
+cata :: Functor f => Algebra f a -> Fix f -> a
 cata f = f . fmap (cata f) . out
 
 -- F-algebras
