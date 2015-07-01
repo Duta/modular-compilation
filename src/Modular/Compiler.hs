@@ -1,6 +1,6 @@
-{-# LANGUAGE TypeOperators #-}
+{-# LANGUAGE FlexibleInstances     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE TypeOperators         #-}
 
 module Modular.Compiler where
 

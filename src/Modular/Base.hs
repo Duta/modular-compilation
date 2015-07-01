@@ -1,7 +1,7 @@
-{-# LANGUAGE TypeOperators #-}
+{-# LANGUAGE FlexibleInstances     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE OverlappingInstances #-}
+{-# LANGUAGE OverlappingInstances  #-}
+{-# LANGUAGE TypeOperators         #-}
 
 module Modular.Base where
 

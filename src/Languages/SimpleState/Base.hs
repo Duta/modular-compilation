@@ -1,7 +1,7 @@
-{-# LANGUAGE TypeOperators #-}
+{-# LANGUAGE FlexibleContexts      #-}
+{-# LANGUAGE FlexibleInstances     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FlexibleContexts #-}
-{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE TypeOperators         #-}
 
 module Languages.SimpleState.Base where
 
